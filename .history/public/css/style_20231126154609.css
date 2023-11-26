@@ -1,0 +1,18 @@
+html{
+    font-size: 100%;
+}
+body{
+    color: #2d2d2d;
+    font-family: Arial, Helvetica, sans-serif;
+}
+img{
+    max-width: 100%;
+}
+
+
+
+
+#header .site-title{
+    width: 160px;
+
+}
