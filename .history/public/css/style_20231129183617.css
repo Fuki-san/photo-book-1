@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+html{
+    font-size: 100%;
+}
+body{
+    font-size: 0.875rem;
+    color: #333;
+    background-color: #f4f9ff;
+}
+img{
+    max-width: 100%;
+    /* 画像は文字みたいに最初からサイズが決まっているわけではないので、
+    (厳密にいえばテキストも同様で○○remと相対的なサイズにする)小さい画面サイズで
+    はみ出したり、大きい画面サイズで余白ができるほど小さい画像にならないように、
+    レスポンシブデザインを活かすため、max-width100%をしている */
+}
+.container{
+    /* つまり.containerの子要素は本来、子のブロック要素は親要素と同じ幅になってmarigin autoなんて
+    効かないが、1000pxの幅を超えたときに、containerがインライン要素と同じ感じに
+    (block要素の幅100%でなく)1000pxという幅を持ち始め、それよりも大きい外側の部分を調整して
+    marigin autoが効き、真ん中に来るようになる。
+    端的に言えば↓の2つのコードは、幅が1000pxを超えたときに要素が真ん中に来るようにすること */
+    /* .containerにも.innerにもmax-widthをする理由は、.innerの幅は
+    .containerの1000pxを超えることがないが、それを超えて例えば1200pxのとき、
+    .containerは200px分marginを取る。子のsection index(containerと同じ幅)も同様に1000pxcontentになり200px分は
+    marginになる。このときでもinnerは600pxの幅を保ち、親のsection(1000px)に対して400px(左右200pxずつ)
+    marginを取り、残りの200pxはそもそも範囲外でmarginでさえ対象外だから関係なし。
+    つまり最初真ん中にindex要素を配置したいな→indexは600pxまでmainvisualと同じ幅で
+    それ以上は画像だけ幅が伸びていく形(T型見たいなデザイン)にしようかな...でmax-widthとmargin autoが決まる */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.inner{
+    margin: 0 auto;
+    max-width: 600px;
+}
+.sec-title{
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/* header */
+
+#header{
+    margin-top: 60px;
+}
+#header .site-title{
+    width: 160px;
+    /* h1の高さ(厳密にはborderlineだから、文字のaとかだとa文字がmainvisualと重なる。vertical-align bottomにすれば大丈夫だが...)をaやimgと合わせるため。 */
+    line-height: 1px;
+}
+#header a{
+    /* h1の範囲をaと合わせるため。これでクリックする範囲をh1と同じにした。
+    aの高さはdisplayblockしてない状態だとh1と同じ高さだから、
+    aも高さ変更必要でdisplay blockを使用 */
+    display: block;
+}
+/* main */
+#mainvisual{
+    margin-bottom: 60px;
+}
+#index{
+    background-color: #fff;
+    padding: 30px 0;
+    margin-bottom: 60px;
+}
+#index .index-list{
+    
+}

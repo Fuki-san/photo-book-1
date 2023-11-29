@@ -1,0 +1,45 @@
+html{
+    font-size: 100%;
+}
+body{
+    color: #2d2d2d;
+    font-family: Arial, Helvetica, sans-serif;
+}
+img{
+    max-width: 100%;
+}
+
+.wrapper {
+    padding: 0 5%;
+}
+
+
+#header .site-title{
+    width: 150px;
+}
+#header .site-title a{
+    display: block;
+}
+#header{
+    margin-bottom: 10px;
+    padding-top: 40px;
+}
+
+#mainvisual{
+    vertical-align: bottom;
+}
+
+#index{
+    margin: 0 auto;
+    text-align: left;
+}
+#index ul{
+    display: inline;
+}
+
+.detail-img{
+    width: 300px;
+}
+.flex-item{
+    display: flex;
+}
