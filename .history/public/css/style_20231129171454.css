@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+html{
+    font-size: 100%;
+}
+body{
+    font-size: 0.875rem;
+    color: #333;
+    background-color: #f4f9ff;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    つまり.containerの子要素は本来、子のブロック要素は親要素と同じ幅になってmarigin autoなんて
+    効かないが、1000pxの幅を超えたときに、containerがインライン要素と同じ感じに
+    (block要素の幅100%でなく)1000pxという幅を持ち始め、
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.inner{
+    margin: 0 auto;
+    max-width: 600px;
+}
+.sec-title{
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/* header */
+
+#header{
+    margin-bottom: 10px;
+}
+#header .site-title{
+    width: 160px;
+}
+#header a{
+    display: block;
+}
+/* main */
+#mainvisual{
+    margin-bottom: 60px;
+}
+#mainvisual img{
+    width: 100%;
+}
+#index .content{
+    
+}

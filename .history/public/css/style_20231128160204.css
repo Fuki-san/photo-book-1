@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+html{
+    font-size: 100%;
+}
+img{
+    max-width: 100%;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+    color: #333;
+    background-color: #b79b9b;
+}
+.container{
+    padding: 30px 5%;
+    margin-top: 20px;
+    margin: 0 auto;
+}
+
+/* header */
+
+#header{
+    margin-bottom: 10px;
+}
+#header .site-title{
+    width: 160px;
+}
+#header a{
+    display: block;
+}
+/* main */
+.mainvisual{
+    margin-bottom: 60px;
+}
+.mainvisual img{
+    width: 100%;
+}
+#index .
